@@ -7,7 +7,17 @@ moduleForComponent('sign-in-form', 'Integration | Component | sign in form', {
 
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
+  this.set('tagName', 'form');
+  this.set('classNames', 'form-horizontal');
+  this.set('  credentials', '{}');
   // Handle any actions with this.on('myAction', function(val) { ... });
+  this.on('submit', function() {
+    this.sendAction('submit', this.get('credentials'));
+  });
+  this.on('reset', function() {
+    this.set('credentials', {});
+  });
+
 
   this.render(hbs`{{sign-in-form}}`);
 
