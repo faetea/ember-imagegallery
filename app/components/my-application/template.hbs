@@ -11,7 +11,6 @@
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
         <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
-        {{!-- <li>{{#link-to "sign-out"}}Sign Out{{/link-to}}</li> --}}
         <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
         <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>

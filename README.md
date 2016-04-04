@@ -1,5 +1,7 @@
 # Authentication in Ember
 
+Ember front-end application uses token authentication with a Rails back-end API
+
 ## installation
 
 1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)

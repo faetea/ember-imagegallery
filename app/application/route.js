@@ -9,12 +9,10 @@ export default Ember.Route.extend({
       this.get('auth').signOut()
       .then(() => this.transitionTo('sign-in'))
       .then(() => {
-        this.get('flashMessages')
-        .warning('You have been signed out.');
+        this.get('flashMessages').warning('You have been signed out.');
       })
       .catch(() => {
-        this.get('flashMessages')
-        .danger('There was a problem. Are you sure you\'re signed-in?');
+        this.get('flashMessages').danger('There was a problem. Are you sure you\'re signed-in?');
       });
     },
 
@@ -24,12 +22,10 @@ export default Ember.Route.extend({
       });
 
       if (unauthorized) {
-        this.get('flashMessages')
-        .danger('You must be authenticated to access this page.');
+        this.get('flashMessages').danger('You must be authenticated to access this page.');
         this.transitionTo('/sign-in');
       } else {
-        this.get('flashMessages')
-        .danger('There was a problem. Please try again.');
+        this.get('flashMessages').danger('There was a problem. Please try again.');
       }
 
       return false;
