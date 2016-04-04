@@ -13,7 +13,8 @@ Ember front-end application uses token authentication with a Rails back-end API
 ## Process
 
 -   Logout was not working when cloned.
--   Added `auth: Ember.inject.service(),` to `app/application/route.js`
+-   Changed `application/template.hbs` to `{{my-application signOut="signOut"}}`
+-   Added `auth: Ember.inject.service(),` in `app/application/route.js`
 -   Logout seems to be working now.
 
 ## ember-ajax
