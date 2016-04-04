@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  auth: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
 
   actions: {
@@ -8,7 +9,8 @@ export default Ember.Route.extend({
       this.get('auth').signOut()
       .then(() => this.transitionTo('sign-in'))
       .then(() => {
-        this.get('flashMessages').warning('You have been signed out.');
+        this.get('flashMessages')
+        .warning('You have been signed out.');
       })
       .catch(() => {
         this.get('flashMessages')

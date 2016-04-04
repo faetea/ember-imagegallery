@@ -7,7 +7,17 @@ moduleForComponent('change-password-form', 'Integration | Component | change pas
 
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
+  this.set('tagName', 'form');
+  this.set('classNames', 'form-horizontal');
+  this.set('passwords', '{}');
   // Handle any actions with this.on('myAction', function(val) { ... });
+  this.on('submit', function(){
+    this.sendAction('submit', this.get('passwords'));
+  });
+  this.on('reset', function(){
+    this.set('passwords', {});
+  });
+
 
   this.render(hbs`{{change-password-form}}`);
 

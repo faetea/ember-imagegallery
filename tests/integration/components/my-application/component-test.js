@@ -7,7 +7,14 @@ moduleForComponent('my-application', 'Integration | Component | my application',
 
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
+  this.set('auth', 'Ember.inject.service()');
+  this.set('user', 'auth.credentials.email');
+  this.set('isAuthenticated', 'auth.isAuthenticated');
   // Handle any actions with this.on('myAction', function(val) { ... });
+  this.on('signOut', function() {
+    this.sendAction('signOut');
+  });
+
 
   this.render(hbs`{{my-application}}`);
 

@@ -7,7 +7,10 @@ moduleForComponent('password-confirmation-input', 'Integration | Component | pas
 
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
+  this.set('tagName', 'div');
+  this.set('classNames', 'form-group');
   // Handle any actions with this.on('myAction', function(val) { ... });
+
 
   this.render(hbs`{{password-confirmation-input}}`);
 

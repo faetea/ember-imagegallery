@@ -7,7 +7,14 @@ moduleForComponent('hamburger-menu', 'Integration | Component | hamburger menu',
 
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
+  this.set('tagName', 'button');
+  this.set('classNames', 'navbar-toggle, collapsed');
+  this.set('attributeBindings', 'toggle:data-toggle, target:data-target, expanded:aria-expanded');
+  this.set('toggle', 'collapse');
+  this.set('target', '#navigation');
+  this.set('expanded', 'false');
   // Handle any actions with this.on('myAction', function(val) { ... });
+
 
   this.render(hbs`{{hamburger-menu}}`);
 

@@ -7,7 +7,10 @@ moduleForComponent('navbar-header', 'Integration | Component | navbar header', {
 
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
+  this.set('tagName', 'div');
+  this.set('classNames', 'navbar-header');
   // Handle any actions with this.on('myAction', function(val) { ... });
+
 
   this.render(hbs`{{navbar-header}}`);
 
