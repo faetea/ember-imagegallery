@@ -8,6 +8,12 @@
 1.  Follow the instructions to setup the [API]().
 1.  Start the font-end server with `ember server --proxy http://localhost:3000`.
 
+## Process
+
+-   Logout was not working when cloned.
+-   Added `auth: Ember.inject.service(),` to `app/application/route.js`
+-   Logout seems to be working now.
+
 ## ember-ajax
 
 [github.com/ember-ajax](https://github.com/ember-cli/ember-ajax)
