@@ -7,7 +7,7 @@ Ember front-end application uses token authentication with a Rails back-end API
 1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 1.  Install dependencies with `npm install` and `bower install`.
-1.  Follow the instructions to setup the [API]().
+1.  Follow the instructions to setup the [API](https://github.com/faetea/ember-auth-api).
 1.  Start the font-end server with `ember server --proxy http://localhost:3000`.
 
 ## Process
