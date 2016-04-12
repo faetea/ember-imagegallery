@@ -5,9 +5,8 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "users"}}All Users{{/link-to}}</li>
-        <li>{{#link-to "collections"}}All Collections{{/link-to}}</li>
-        <li>{{#link-to "arts"}}All Art{{/link-to}}</li>
+        <li>{{#link-to "collections"}}Browse Collections{{/link-to}}</li>
+        <li>{{#link-to "newcollection"}}New Collection{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -22,8 +21,6 @@
     </div>
   </div>
 </nav>
-
-<h1>Welcome to Ember!</h1>
 
 <div class="col-md-8 col-md-offset-2">
   {{outlet}}
