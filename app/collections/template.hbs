@@ -1,0 +1,12 @@
+<h3>All Collections</h3>
+
+<ul>
+{{#each model as |collection|}}
+  <li>
+    Name:{{collection.name}},
+    Description:{{collection.desc}},
+    Image:{{collection.cover}},
+    Owner:{{collection.user}}
+  </li>
+{{/each}}
+</ul>
