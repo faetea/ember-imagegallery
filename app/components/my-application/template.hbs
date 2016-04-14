@@ -5,6 +5,7 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
+        <li>{{#link-to "users"}}{{user}}{{/link-to}}</li>
         <li>{{#link-to "collections"}}Browse Collections{{/link-to}}</li>
         <li>{{#link-to "newcollection"}}New Collection{{/link-to}}</li>
         {{/if}}

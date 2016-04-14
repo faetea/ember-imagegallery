@@ -1,10 +1,17 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-  name: DS.attr('string'),
-  desc: DS.attr('string'),
-  cover: DS.attr('string'),
+const {
+  Model,
+  attr,
+  hasMany,
+  belongsTo
+} = DS;
 
-  user: DS.belongsTo('user', {async: true}),
-  arts: DS.hasMany('art', {async: true})
+export default DS.Model.extend({
+  name: attr('string'),
+  desc: attr('string'),
+  cover: attr('string'),
+
+  user: belongsTo('user', {async: true, autoSave: true }),
+  arts: hasMany('art', { async: true, dependent: 'destroy' })
 });
