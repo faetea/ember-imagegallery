@@ -1,12 +1,13 @@
 import DS from 'ember-data';
+const { Model, attr, hasMany } = DS;
 
-export default DS.Model.extend({
-  email: DS.attr('string'),
+export default Model.extend({
+  email: attr('string'),
 
-  username: DS.attr('string'),
-  firstname: DS.attr('string'),
-  lastname: DS.attr('string'),
-  bio: DS.attr('string'),
+  username: attr('string'),
+  firstname: attr('string'),
+  lastname: attr('string'),
+  bio: attr('string'),
 
-  collections: DS.hasMany('collection', {async: true})
+  collections: hasMany('collection', { async: true, dependent: 'destroy' })
 });
