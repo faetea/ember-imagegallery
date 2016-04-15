@@ -8,10 +8,9 @@ export default Ember.Component.extend({
   actions: {
     fileLoaded (file) {
       set(this, 'file', file);
-      this.set('upload.cover', {cover: file});
-      console.log(this.get('upload.cover'));
       console.log(this.get('file'));
-      // console.log(file.filename, file.type, file.data, file.size);
+      this.set('upload.cover', file.data);
+      // console.log(this.get('upload.cover'));
     },
 
     submit () {
@@ -21,3 +20,8 @@ export default Ember.Component.extend({
     }
   }
 });
+
+// console.log(this.get('upload.cover.filename'));
+// console.log(this.get('upload.cover.data'));
+// console.log(this.get('upload.cover.type'));
+// console.log(this.get('upload.cover.size'));
