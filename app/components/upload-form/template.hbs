@@ -24,14 +24,15 @@
       Cover Image
     </label>
     <div class="col-xs-12 col-sm-10">
-      {{!-- {{input type="file" id="cover" value=upload.cover}} --}}
       {{#file-picker
         accept=".jpg,.jpeg,.gif,.png"
         fileLoaded="fileLoaded"
-        preview=false
         readAs="readAsDataURL"}}
-        Drag here or click to upload a file
+        <span class="">Drag here or CLICK to upload a file</span>
       {{/file-picker}}
+      {{#if file}}
+      <span class="">Click on preview to choose a different Cover.</span>
+      {{/if}}
     </div>
   </div>
 
