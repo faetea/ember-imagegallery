@@ -1,2 +1,58 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+
+.file-picker__preview__image {
+  max-width: 300px
+}
+
+.amethyst {
+  color: #9966cc /** Amethyst, Moderate violet, a websafe color */
+}
+.ameblue {
+  color: #6666cc /** Moderate blue, a websafe color */
+}
+.amemagenta {
+  color: #cc66cc /** Moderate magenta, a websafe color */
+}
+.byzantine {
+  color: #bd33a4 /** Byzantine, Moderate magenta */
+}
+.dkorchid {
+  color: #9932cc /** Dark orchid, Strong violet */
+}
+.jazzberry {
+  color: #a50b5e /** Jazzberry jam, Dark pink */
+}
+.redviolet {
+  color: #c71585 /** Red violet, Strong pink */
+}
+
+.amethyst-bg {
+  color: white;
+  background: #9966cc /** Amethyst, Moderate violet, a websafe color */
+}
+.ameblue-bg {
+  color: white;
+  background: #6666cc /** Moderate blue, a websafe color */
+}
+.amemagenta-bg {
+  color: white;
+  background: #cc66cc /** Moderate magenta, a websafe color */
+}
+.byzantine-bg {
+  color: white;
+  background: #bd33a4 /** Byzantine, Moderate magenta */
+}
+.dkorchid-bg {
+  color: white;
+  background: #9932cc /** Dark orchid, Strong violet */
+}
+.jazzberry-bg {
+  color: white;
+  background: #a50b5e /** Jazzberry jam, Dark pink */
+}
+.redviolet-bg {
+  color: white;
+  background: #c71585 /** Red violet, Strong pink */
+}

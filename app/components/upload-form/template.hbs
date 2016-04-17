@@ -1,0 +1,46 @@
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-xs-12 col-sm-2 control-label">
+      Name
+    </label>
+    <div class="col-xs-12 col-sm-10">
+      {{input class="form-control" id="name" placeholder="Collection Name"
+      type="text" value=upload.name}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-12 col-sm-2 control-label">
+      Description
+    </label>
+    <div class="col-xs-12 col-sm-10">
+      {{input class="form-control" id="desc" placeholder="Description"
+      type="text" value=upload.desc}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-xs-12 col-sm-2 control-label">
+      Cover Image
+    </label>
+    <div class="col-xs-12 col-sm-10">
+      {{#file-picker
+        accept=".jpg,.jpeg,.gif,.png"
+        fileLoaded="fileLoaded"
+        readAs="readAsDataURL"}}
+        <span class="">Drag here or CLICK to upload a file</span>
+      {{/file-picker}}
+      {{#if file}}
+      <span class="">Click on preview to choose a different Cover.</span>
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-10">
+      <button {{action "submit"}} class="btn btn-default" type="submit">
+        Create Collection
+      </button>
+    </div>
+  </div>
+</form>
