@@ -5,7 +5,7 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "users"}}{{user}}{{/link-to}}</li>
+        <li>{{#link-to "user" userID}}{{user}} Profile{{/link-to}}</li>
         <li>{{#link-to "collections"}}Browse Collections{{/link-to}}</li>
         <li>{{#link-to "newcollection"}}New Collection{{/link-to}}</li>
         {{/if}}
@@ -23,7 +23,7 @@
   </div>
 </nav>
 
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-offset-2 col-md-8">
   {{outlet}}
 </div>
 

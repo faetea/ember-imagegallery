@@ -1,0 +1,47 @@
+{{#if isAuthenticated}}
+  {{#unless editable}}
+
+    <button {{action "toggleEdit"}} class="btn btn-default">Edit</button>
+    <p>Email: {{user.email}}</p>
+    <p>Username: {{user.username}}</p>
+    <p>Firstname: {{user.firstName}}</p>
+    <p>Lastname: {{user.lastName}}</p>
+    <p>About Me: {{user.bio}}</p>
+
+  {{else}}
+
+    <form class="form-horizontal">
+      <div class="form-group">
+      {{input class="form-control" id="username"
+              placeholder="username"
+              type="text" value=profile.username}}
+      </div>
+      <div class="form-group">
+        {{input class="form-control" id="first"
+                placeholder="given name"
+                type="text" value=profile.firstName}}
+      </div>
+      <div class="form-group">
+        {{input class="form-control" id="last"
+                placeholder="surname"
+                type="text" value=profile.lastName}}
+      </div>
+      <div class="form-group">
+        {{input class="form-control" id="bio"
+                placeholder="a few words about yourself"
+                type="text" value=profile.bio}}
+      </div>
+      <div class="form-group">
+        <button {{action "updateProfile"}} class="btn btn-default">
+          Save
+        </button>
+        <button {{action "toggleEdit"}} class="btn btn-default">
+          Cancel
+        </button>
+      </div>
+    </form>
+
+  {{/unless}}
+{{else}}
+  You need to Sign In
+{{/if}}

@@ -1,0 +1,27 @@
+<h3>Specific Collection - {{model.name}}</h3>
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+  <div class="collection">
+    <img src="{{model.mediumUrl}}"/>
+    <h4>{{model.user.email}}, {{model.desc}}</h4>
+  </div>
+</div>
+
+{{upload-art-form submit="createArt"}}
+
+<h4>All Images in Collection</h4>
+
+{{#each model.arts as |art|}}
+<div class="col-xs-12 col-sm-6 col-md-6">
+  <div>
+    <img src="{{art.mediumUrl}}"/>
+    <small>{{art.title}}, {{art.caption}}</small>
+    <small>{{art.collections.name}}</small>
+    <small>{{art.collection.name}}</small>
+    <small>{{art.collections.user.email}}</small>
+    <small>{{art.collection.user.email}}</small>
+  </div>
+</div>
+{{else}}
+  <h4>This image collection is empty.</h4>
+{{/each}}
