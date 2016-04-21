@@ -1,47 +1,90 @@
 {{#if isAuthenticated}}
-  {{#unless editable}}
-
-    <button {{action "toggleEdit"}} class="btn btn-default">Edit</button>
-    <p>Email: {{user.email}}</p>
-    <p>Username: {{user.username}}</p>
-    <p>Firstname: {{user.firstName}}</p>
-    <p>Lastname: {{user.lastName}}</p>
-    <p>About Me: {{user.bio}}</p>
-
-  {{else}}
-
-    <form class="form-horizontal">
-      <div class="form-group">
-      {{input class="form-control" id="username"
-              placeholder="username"
-              type="text" value=profile.username}}
-      </div>
-      <div class="form-group">
-        {{input class="form-control" id="first"
-                placeholder="given name"
-                type="text" value=profile.firstName}}
-      </div>
-      <div class="form-group">
-        {{input class="form-control" id="last"
-                placeholder="surname"
-                type="text" value=profile.lastName}}
-      </div>
-      <div class="form-group">
-        {{input class="form-control" id="bio"
-                placeholder="a few words about yourself"
-                type="text" value=profile.bio}}
-      </div>
-      <div class="form-group">
-        <button {{action "updateProfile"}} class="btn btn-default">
-          Save
-        </button>
-        <button {{action "toggleEdit"}} class="btn btn-default">
-          Cancel
-        </button>
-      </div>
-    </form>
-
-  {{/unless}}
+  <form class="form-horizontal" autocomplete="on">
+    <div class="form-group">
+      <label class="col-xs-12 col-sm-2 control-label">
+        username:
+      </label>
+      {{#unless editable}}
+        <div class="col-xs-12 col-sm-10">
+          {{user.username}}
+        </div>
+      {{else}}
+        <div class="col-xs-12 col-sm-10">
+          {{input class="form-control" id="username"
+                  placeholder="username"
+                  type="text" value=profile.username}}
+        </div>
+      {{/unless}}
+    </div>
+    <div class="form-group">
+      <label class="col-xs-12 col-sm-2 control-label">
+        given name:
+      </label>
+      {{#unless editable}}
+        <div class="col-xs-12 col-sm-10">
+          {{user.firstName}}
+        </div>
+      {{else}}
+        <div class="col-xs-12 col-sm-10">
+          {{input class="form-control" id="first"
+                  placeholder="given name"
+                  type="text" value=profile.firstName}}
+        </div>
+      {{/unless}}
+    </div>
+    <div class="form-group">
+      <label class="col-xs-12 col-sm-2 control-label">
+        surname:
+      </label>
+      {{#unless editable}}
+        <div class="col-xs-12 col-sm-10">
+          {{user.lastName}}
+        </div>
+      {{else}}
+        <div class="col-xs-12 col-sm-10">
+          {{input class="form-control" id="last"
+                  placeholder="surname"
+                  type="text" value=profile.lastName}}
+        </div>
+      {{/unless}}
+    </div>
+    <div class="form-group">
+      <label class="col-xs-12 col-sm-2 control-label">
+        about me:
+      </label>
+      {{#unless editable}}
+        <div class="col-xs-12 col-sm-10">
+          {{user.bio}}
+        </div>
+      {{else}}
+        <div class="col-xs-12 col-sm-10">
+          {{input class="form-control" id="bio"
+                  placeholder="a few words about yourself"
+                  type="text" value=profile.bio}}
+        </div>
+      {{/unless}}
+    </div>
+    <div class="form-group">
+      {{#unless editable}}
+        <div class="col-xs-12 col-sm-offset-2 col-sm-10">
+          <button {{action "toggleEdit"}} class="btn btn-default">
+            Edit
+          </button>
+        </div>
+      {{else}}
+        <div class="col-xs-12 col-sm-offset-2 col-sm-10">
+          <button {{action "updateProfile"}} class="btn btn-default" type="submit">
+            Save
+          </button>
+          <button {{action "toggleEdit"}} class="btn btn-default">
+            Cancel
+          </button>
+        </div>
+      {{/unless}}
+    </div>
+  </form>
 {{else}}
   You need to Sign In
 {{/if}}
+
+{{#link-to "change-password" class="btn btn-default"}}Change Password{{/link-to}}

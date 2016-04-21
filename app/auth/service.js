@@ -45,23 +45,18 @@ export default Ember.Service.extend({
     });
   },
 
-  updateUser (profile) {
-    return this.get('ajax').patch(`/users/${this.get('credentials.id')}`, {
-      data: {
-        user: {
-          username: profile.username,
-          first_name: profile.firstName,
-          last_name: profile.lastName,
-          bio: profile.bio,
-        }
-      },
-    }).then((result) => {
-      this.get('credentials').set('username', result.user.username);
-      this.get('credentials').set('firstName', result.user.firstName);
-      this.get('credentials').set('lastName', result.user.lastName);
-      this.get('credentials').set('bio', result.user.bio);
-    });
-  },
+  // updateUser (profile) {
+  //   return this.get('ajax').patch(`/users/${this.get('credentials.id')}`, {
+  //     data: {
+  //       user: {
+  //         username: profile.username,
+  //         first_name: profile.firstName,
+  //         last_name: profile.lastName,
+  //         bio: profile.bio,
+  //       }
+  //     },
+  //   });
+  // },
 
   signOut () {
     return this.get('ajax').del(`/sign-out/${this.get('credentials.id')}`)

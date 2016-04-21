@@ -1,6 +1,5 @@
-<h3>Specific User - {{model.email}}</h3>
-{{my-profile routeUpdateProfile="updateUser"}}
+<h3>My Profile</h3>
 
-{{!-- {{#each model.user as |eachUser|}}
-  {{my-profile user=eachUser routeUpdateProfile='updateUser'}}
-{{/each}} --}}
+{{my-profile routeUpdateProfile="editUser" user=model}}
+
+{{change-password-form submit="changePassword"}}

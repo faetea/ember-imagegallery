@@ -5,9 +5,9 @@ export default Ember.Component.extend({
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
   profile: {},
   editable: false,
-  doubleClick () {
-    this.toggleProperty('editable');
-  },
+  // doubleClick () {
+  //   this.toggleProperty('editable');
+  // },
 
   actions: {
     updateProfile () {

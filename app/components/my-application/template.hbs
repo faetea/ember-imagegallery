@@ -5,14 +5,13 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "user" userID}}{{user}} Profile{{/link-to}}</li>
         <li>{{#link-to "collections"}}Browse Collections{{/link-to}}</li>
         <li>{{#link-to "newcollection"}}New Collection{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
-        <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+        <li>{{#link-to "user" userID}}{{user}}{{/link-to}}</li>
         <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
         <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
