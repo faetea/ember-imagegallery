@@ -6,5 +6,9 @@ export default Model.extend({
   caption: attr('string'),
   image: attr('string'),
 
+  thumb_url: attr('string'),
+  small_url: attr('string'),
+  medium_url: attr('string'),
+
   collection: belongsTo('collection', { async: true, autoSave: true })
 });

@@ -1,0 +1,11 @@
+<h3>All Arts</h3>
+
+{{#each model as |art|}}
+<div class="col-xs-12 col-sm-6 col-md-6">
+  <div>
+    <img src="{{art.smallUrl}}"/>
+    <h4>{{art.title}} | {{art.collection.user.email}}</h4>
+    <small>{{art.caption}}</small>
+  </div>
+</div>
+{{/each}}
