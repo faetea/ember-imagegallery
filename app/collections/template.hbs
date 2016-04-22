@@ -1,13 +1,13 @@
 <h3>All Collections</h3>
 
 {{#each model as |collection|}}
-<div class="col-xs-12 col-sm-6 col-md-6">
-  <div class="collection">
-    {{#link-to "collection" collection}}
-      <img src="{{collection.smallUrl}}"/>
-    {{/link-to}}
-    <h4>{{collection.name}} | {{collection.user.email}}</h4>
-    <small>{{collection.desc}}</small>
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    <div class="collection">
+      {{#link-to "collection" collection.id}}
+        <img src="{{collection.smallUrl}}"/>
+      {{/link-to}}
+      <h4>{{collection.name}} by {{collection.user.email}}</h4>
+      <small>{{collection.desc}}</small>
+    </div>
   </div>
-</div>
 {{/each}}

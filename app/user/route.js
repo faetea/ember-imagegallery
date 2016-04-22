@@ -7,10 +7,15 @@ export default Ember.Route.extend({
   // model (params) {
   //   return this.store.findRecord('user', params.user_id);
   // },
+  // model (params) {
+  //   return this.store.find('user', params.id);
+  // },
 
   actions: {
     editUser (profile) {
+      console.log(profile);
       this.store.findRecord('user', this.get('userID')).then(function(user) {
+        console.log(user);
         user.get('username');
         user.get('first_name');
         user.get('last_name');
@@ -20,6 +25,7 @@ export default Ember.Route.extend({
         user.set('lastName', profile.lastName);
         user.set('bio', profile.bio);
         user.save();
+        console.log(user);
       });
     },
 
