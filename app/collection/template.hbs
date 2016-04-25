@@ -8,7 +8,7 @@
 </div>
 
 
-{{upload-art-form submit="createArt"}}
+{{upload-art-form collection=model submit="createArt"}}
 
 
 <h4>All Images in Collection</h4>
@@ -17,10 +17,9 @@
 <div class="col-xs-12 col-sm-6 col-md-6">
   <div>
     <img src="{{art.mediumUrl}}"/>
-    <small>{{art.title}}, {{art.caption}}</small>
-    <small>{{art.collections.name}}</small>
-    <small>{{art.collection.name}}</small>
-    <small>{{art.collections.user.email}}</small>
+    <small>{{art.title}}, </small>
+    <small>{{art.caption}}, </small>
+    <small>{{art.collection.name}}, </small>
     <small>{{art.collection.user.email}}</small>
   </div>
 </div>
