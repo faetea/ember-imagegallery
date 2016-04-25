@@ -1,21 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model (params) {
-    return this.store.findRecord('collection', params.collection_id);
-  },
-  // model (params) {
-  //   return this.store.find('collection', params.id);
-  // },
 
   actions: {
     createArt (art) {
-      let currentCollection = this.get('model');
-
-      this.get('store').createRecord('art', art, {
-        'collection': currentCollection
-      }).save();
-    }
+      let currentCollection = this.modelFor('collection');
+      let newArt = this.get('store').createRecord('art', art);
+      newArt.set('collection', currentCollection);
+      console.log(newArt.get('collection').get('id'));
+      newArt.save();
+    },
 
   }
 });

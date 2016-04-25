@@ -4,12 +4,6 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   userID: Ember.computed.alias('auth.credentials.id'),
   flashMessages: Ember.inject.service(),
-  // model (params) {
-  //   return this.store.findRecord('user', params.user_id);
-  // },
-  // model (params) {
-  //   return this.store.find('user', params.id);
-  // },
 
   actions: {
     editUser (profile) {
