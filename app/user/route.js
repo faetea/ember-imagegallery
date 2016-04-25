@@ -4,13 +4,12 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   userID: Ember.computed.alias('auth.credentials.id'),
   flashMessages: Ember.inject.service(),
-  // model (params) {
-  //   return this.store.findRecord('user', params.user_id);
-  // },
 
   actions: {
     editUser (profile) {
+      console.log(profile);
       this.store.findRecord('user', this.get('userID')).then(function(user) {
+        console.log(user);
         user.get('username');
         user.get('first_name');
         user.get('last_name');
@@ -20,6 +19,7 @@ export default Ember.Route.extend({
         user.set('lastName', profile.lastName);
         user.set('bio', profile.bio);
         user.save();
+        console.log(user);
       });
     },
 
