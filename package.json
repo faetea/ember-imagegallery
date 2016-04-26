@@ -1,7 +1,7 @@
 {
-  "name": "ember-auth",
+  "name": "ember-imagegallery",
   "version": "0.0.0",
-  "description": "Small description for ember-auth goes here",
+  "description": "Ember image gallery front-end app uses token authentication with a Rails back-end API that connects to Amazon S3 to store images.",
   "private": true,
   "directories": {
     "doc": "doc",
