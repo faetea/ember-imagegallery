@@ -4,7 +4,7 @@
   <div class="col-xs-12 col-sm-6 col-md-6">
     <div class="collection">
       {{#link-to "collection" collection.id}}
-        <img src="{{collection.smallUrl}}"/>
+        <img src={{collection.smallUrl}}/>
       {{/link-to}}
       <h4>{{collection.name}} by {{collection.user.email}}</h4>
       <small>{{collection.desc}}</small>
