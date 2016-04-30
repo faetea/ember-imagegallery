@@ -1,5 +1,15 @@
-<h3>{{model.email}}</h3>
+{{!-- <div class="well well-lg">
+  <h3>{{model.email}}</h3>
 
-{{my-profile routeUpdateProfile="editUser" user=model}}
+  {{my-profile routeUpdateProfile="editUser" user=model}}
+</div> --}}
 
-{{change-password-form submit="changePassword"}}
+<div class="row">
+  <div class="col-md-4">
+    {{#profile-show user=model badge=user.avatar}}
+      {{#link-to 'userEdit' model class='btn btn-success btn-xs'}}
+        Edit
+      {{/link-to}}
+    {{/profile-show}}
+  </div>
+</div>
