@@ -7,7 +7,8 @@ export default Ember.Route.extend({
 
   actions: {
     saveUser(editUser) {
-      editUser.save().then(() => this.transitionTo('users'));
+      console.log(editUser);
+      editUser.save().then(() => this.transitionTo('user', editUser.id));
     },
 
   }
