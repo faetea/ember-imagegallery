@@ -17,6 +17,14 @@ that uses Amazon S3 to store images.
 -   Added `auth: Ember.inject.service(),` in `app/application/route.js`
 -   Logout seems to be working now.
 
+## Stories
+
+-   A User can Edit their own Profile.
+-   A User can view other user's profiles, not edit.
+-   A User can create a new collection and add images to it.
+-   A User can edit their collection description, image captions and titles.
+-   A User can view other user's image collections, not edit.
+
 ## ember-ajax
 
 This app is using the [ember-ajax](https://github.com/ember-cli/ember-ajax)

@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('user', { path: 'users/:user_id' });
+  this.route('userEdit', { path: 'users/:user_id/edit' });
   this.route('newcollection', { path: 'collections/new' });
   this.route('collections');
   this.route('collection', { path: 'collections/:collection_id' });
