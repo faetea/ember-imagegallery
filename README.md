@@ -73,5 +73,5 @@ An addon that provides a component to easily add a filepicker to application.
 
 ## [License](LICENSE)
 
-Source code distributed under the MIT license. Text and other assets copyright
-General Assembly, Inc., all rights reserved.
+Source code distributed under the MIT license.
+Text and other assets copyright General Assembly, Inc., all rights reserved.
