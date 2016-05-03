@@ -15,6 +15,7 @@ Router.map(function () {
   this.route('newcollection', { path: 'collections/new' });
   this.route('collections');
   this.route('collection', { path: 'collections/:collection_id' });
+  this.route('collectionEdit', { path: 'collections/:collection_id/edit' });
   this.route('arts');
   this.route('art', { path: 'arts/:art_id' });
 });

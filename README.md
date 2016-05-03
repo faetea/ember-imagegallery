@@ -19,11 +19,32 @@ that uses Amazon S3 to store images.
 
 ## Stories
 
--   A User can Edit their own Profile.
--   A User can view other user's profiles, not edit.
--   A User can create a new collection and add images to it.
--   A User can edit their collection description, image captions and titles.
--   A User can view other user's image collections, not edit.
+A User can:
+
+-   signup, signin, signout, and change-password      Jeff-template
+-   Update their their own profile                    April 20th
+-   view other user's profiles, not edit              need to test
+-   attach a file-avatar to their profile             not yet
+-   Create new collection w/ attached cover-image     April 17th
+-   view all Collections by all Users                 April 17th
+-   view all Collections by current_user              not yet
+-   view all Collections by other User, READONLY      not yet
+-   view specific Collection of current_user          not yet
+-   Update their collection name and description      not yet
+-   Update their collection cover-image               not yet
+-   Delete their collection                           not yet
+-   view specific Collection of other User, READONLY  not yet
+-   Create new Art w/ attached image                  April 20th
+-   view all Arts in current-collection               April 25th
+-   view all Arts by all Users                        not yet
+-   view all Arts by current_user                     not yet
+-   view all Arts by other User, READONLY             not yet
+-   view specific Art in current-collection           not yet
+-   view specific Art of current_user                 not yet
+-   Update their Art title and caption                not yet
+-   Update their Art image                            not yet
+-   Delete their Art                                  not yet
+-   view specific Art of other User, READONLY         not yet
 
 ## ember-ajax
 
