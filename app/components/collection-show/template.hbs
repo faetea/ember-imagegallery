@@ -1,13 +1,14 @@
-<div class="collection">
-  <div class="coverImage" style={{backgroundImage}}>
-    <h1>{{collection.name}}</h1>
+<div class="panel panel-default">
+  <div class="cover-image" style={{backgroundImage}}>
+      <h1 class="text-right">{{collection.name}}</h1>
   </div>
-  <h4>{{collection.desc}} - {{collection.user.email}}</h4>
+</div>
 
-  <div class="add-image-button">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalArt">
-      Add Image
-    </button>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p class="lead">{{collection.desc}} <span class="author">- {{collection.user.email}}</span></p>
+    <div class="text-right button-space-show">
+      {{yield}}
+    </div>
   </div>
 </div>

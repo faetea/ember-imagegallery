@@ -9,7 +9,7 @@
   margin: 20px 0 20px
 }
 
-.coverImage {
+.cover-image {
   padding: 10%;
   width: 100%;
   height: 250px;
@@ -17,12 +17,21 @@
   background-size: 100%;
 }
 
-.coverImage h1 {
+.cover-image > h1 {
   color: #fff;
-  text-shadow: #000 1px 1px 2px;
-  position: absolute;
-  bottom: 100px;
-  right: 50px;
+  text-shadow: #000 2px 2px 4px;
+  position: relative;
+  top: 90%;
+  left: 5%;
+}
+
+.panel-body > .lead {
+  margin-bottom: 0px;
+}
+
+.author {
+  font-weight: bold;
+  color: #999999
 }
 
 .add-image-button {
@@ -31,57 +40,19 @@
   bottom: 30px;
 }
 
+.form-group:last-of-type {
+  margin-bottom: 0px;
+}
+
+.button-space-show > * {
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+.button-space-update > * {
+  margin-right: 1em;
+}
+
 .arts {
   margin-bottom: 40px;
-}
-
-.amethyst {
-  color: #9966cc /** Amethyst, Moderate violet, a websafe color */
-}
-.ameblue {
-  color: #6666cc /** Moderate blue, a websafe color */
-}
-.amemagenta {
-  color: #cc66cc /** Moderate magenta, a websafe color */
-}
-.byzantine {
-  color: #bd33a4 /** Byzantine, Moderate magenta */
-}
-.dkorchid {
-  color: #9932cc /** Dark orchid, Strong violet */
-}
-.jazzberry {
-  color: #a50b5e /** Jazzberry jam, Dark pink */
-}
-.redviolet {
-  color: #c71585 /** Red violet, Strong pink */
-}
-
-.amethyst-bg {
-  color: white;
-  background: #9966cc /** Amethyst, Moderate violet, a websafe color */
-}
-.ameblue-bg {
-  color: white;
-  background: #6666cc /** Moderate blue, a websafe color */
-}
-.amemagenta-bg {
-  color: white;
-  background: #cc66cc /** Moderate magenta, a websafe color */
-}
-.byzantine-bg {
-  color: white;
-  background: #bd33a4 /** Byzantine, Moderate magenta */
-}
-.dkorchid-bg {
-  color: white;
-  background: #9932cc /** Dark orchid, Strong violet */
-}
-.jazzberry-bg {
-  color: white;
-  background: #a50b5e /** Jazzberry jam, Dark pink */
-}
-.redviolet-bg {
-  color: white;
-  background: #c71585 /** Red violet, Strong pink */
 }

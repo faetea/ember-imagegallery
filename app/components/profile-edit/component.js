@@ -6,7 +6,7 @@ export default Ember.Component.extend({
 
   actions: {
     buttonClicked(param) {
-      console.log(param);
+      // console.log(param);
       this.sendAction('action', param);
     },
     // editUser () {
