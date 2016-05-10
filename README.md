@@ -27,7 +27,7 @@ that uses Amazon S3 to store images.
 | Update their their own profile                   | April 20th    |
 | Create new collection w/ attached cover-image    | April 17th    |
 | view all Collections by all Users                | April 17th    |
-| Update their collection name and description     | not yet       |
+| Update their collection name and description     | May 9th       |
 | Create new Art w/ attached image                 | April 20th    |
 | view all Arts in current-collection              | April 25th    |
 | view specific Art in current-collection          | not yet       |

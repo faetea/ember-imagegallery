@@ -7,7 +7,7 @@ export default Ember.Component.extend({
     return Ember.String.htmlSafe(style);
   }),
 
-  buttonLabel: 'Save',
+  buttonLabel: 'Save Changes',
 
   actions: {
     buttonClicked(param) {
@@ -15,6 +15,10 @@ export default Ember.Component.extend({
       this.sendAction('action', param);
       // Ember.Logger.error(param);
     },
+    reset(record) {
+      record.rollbackAttributes();
+      this.sendAction('reset', record);
+    }
 
   }
 });

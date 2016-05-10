@@ -10,6 +10,9 @@ export default Ember.Route.extend({
       // console.log(editCollection);
       editCollection.save().then(() => this.transitionTo('collection', editCollection.id));
     },
+    cancelEdit(editCollection) {
+      this.transitionTo('collection', editCollection.id);
+    },
 
   }
 });
