@@ -33,7 +33,13 @@
       </div>
     </div> {{!-- end form-horizontal --}}
   </div>
-  <div class="panel-footer text-right">
-    <button class="btn btn-success" {{action 'buttonClicked' user}}>Save changes</button>
+  <div class="panel-footer text-right button-space">
+    <button class="btn btn-success" {{action 'submit' user}}>
+      Save changes
+    </button>
+
+    <button class="btn btn-default" {{action 'reset' user}}>
+      Cancel
+    </button>
   </div>
 </div>
