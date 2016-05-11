@@ -1,3 +1,9 @@
+<ol class="breadcrumb">
+  <li>{{#link-to "collections"}}Browse Collections{{/link-to}}</li>
+  <li>{{#link-to "collection" model.collection.id}}{{model.collection.name}}{{/link-to}}</li>
+  <li class="active">{{model.title}}</li>
+</ol>
+
 <div class="col-xs-12 col-sm-12 col-md-12">
   {{art-update art=model submit="saveArt" reset="cancelEdit"}}
 </div>

@@ -30,7 +30,7 @@ that uses Amazon S3 to store images.
 | Update their collection name and description     | May 9th       |
 | Create new Art w/ attached image                 | April 20th    |
 | view all Arts in current-collection              | April 25th    |
-| view specific Art in current-collection          | not yet       |
+| view specific Art in current-collection          | May 11th      |
 | Update their Art title and caption               | not yet       |
 
 ### Second Deployment
