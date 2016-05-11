@@ -1,9 +1,7 @@
 <h3>All Users</h3>
 
-<div class="row">
-  {{#each model as |user|}}
-    <div class="col-md-4">
-      {{profile-show user=user badge=user.avatar}}
-    </div>
-  {{/each}}
-</div>
+{{#each model as |user|}}
+  <div class="col-md-4">
+    {{profile-show user=user badge=user.avatar}}
+  </div>
+{{/each}}

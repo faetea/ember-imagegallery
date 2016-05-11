@@ -18,6 +18,7 @@ Router.map(function () {
   this.route('collectionEdit', { path: 'collections/:collection_id/edit' });
   this.route('arts');
   this.route('art', { path: 'arts/:art_id' });
+  this.route('artEdit', { path: 'arts/:art_id/edit' });
 });
 
 export default Router;

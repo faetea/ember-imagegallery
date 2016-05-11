@@ -1,12 +1,17 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'bootstrap/mixins';
 
 .file-picker__preview__image {
   max-width: 300px
 }
 
-.collection {
-  margin: 20px 0 20px
+.index {
+  margin-bottom: 40px;
+  width: 300px;
+  height: 280px;
+  @include center-block();
+  @include text-overflow();
 }
 
 .cover-image {
@@ -57,10 +62,6 @@
   margin-right: 1em;
 }
 
-.arts {
-  margin-bottom: 40px;
-}
-
 .panel {
   min-width: 200px;
 }
@@ -75,4 +76,8 @@
 
 .control-profile > label {
   text-align: right;
+}
+
+.image-show {
+  margin-bottom: 2em;
 }

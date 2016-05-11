@@ -1,0 +1,24 @@
+<ol class="breadcrumb">
+  <li>{{#link-to "collections"}}Browse Collections{{/link-to}}</li>
+  <li>{{#link-to "collection" art.collection.id}}{{art.collection.name}}{{/link-to}}</li>
+  <li class="active">{{art.title}}</li>
+</ol>
+
+<p class="lead">{{art.collection.name}} <span class="author">- {{art.collection.user.email}}</span>
+</p>
+
+<div class="panel panel-default image-show">
+  <div class="panel-body">
+    <img src={{art.image}} class="img-responsive center-block">
+  </div>
+</div>
+
+<div class="panel panel-default image-show">
+  <div class="panel-body">
+    <p class="col-xs-10 col-sm-10 col-md-10 lead"><span class="author">{{art.title}}</span> {{art.caption}}</p>
+
+    <div class="text-right button-space">
+      {{yield}}
+    </div>
+  </div>
+</div>

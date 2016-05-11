@@ -1,7 +1,13 @@
 <h3>All Collections</h3>
 
-{{#each model as |eachCollection|}}
-  {{collection-index collection=eachCollection}}
-{{else}}
-  <h4>There are no collections.</h4>
-{{/each}}
+<div class="container-fluid">
+  <div class="row">
+    {{#each model as |eachCollection|}}
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        {{collection-index collection=eachCollection}}
+      </div>
+    {{else}}
+      <h4>There are no collections.</h4>
+    {{/each}}
+  </div>
+</div>

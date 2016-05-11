@@ -1,8 +1,6 @@
-<div class="col-xs-12 col-sm-6 col-md-6">
-  <div class="arts">
-    {{#link-to "art" art}}
-      <img src={{art.smallUrl}}>
-    {{/link-to}}
-    <p><strong>{{art.title}}</strong> {{art.caption}}</p>
-  </div>
+<div class="index">
+  {{#link-to "art" art}}
+    <img src={{art.smallUrl}} class="img-responsive">
+  {{/link-to}}
+  <h5>{{art.title}}</h5>
 </div>
