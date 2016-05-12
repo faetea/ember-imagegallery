@@ -1,0 +1,53 @@
+<div class="panel panel-default">
+  <div class="cover-image" style={{backgroundImage}}>
+      <h1 class="text-right">{{collection.name}}</h1>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form class="form-horizontal">
+
+      <div class="form-group">
+        <label class="col-xs-12 col-sm-2 control-label">Name</label>
+        <div class="col-xs-12 col-sm-10">
+          {{input class="form-control" placeholder="name" type="text" value=collection.name}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-xs-12 col-sm-2 control-label">Description</label>
+        <div class="col-xs-12 col-sm-10">
+          {{textarea class="form-control" rows="3" type="text" value=collection.desc}}
+        </div>
+      </div>
+
+      {{!-- <div class="form-group">
+        <label class="col-xs-12 col-sm-2 control-label">
+          Cover Image
+        </label>
+        <div class="col-xs-12 col-sm-10">
+          {{#file-picker
+            accept=".jpg,.jpeg,.gif,.png"
+            fileLoaded="fileLoaded"
+            readAs="readAsDataURL"}}
+            <span class="">Drag here or CLICK to upload a file</span>
+          {{/file-picker}}
+          {{#if file}}
+          <span class="">Click on preview to choose a different Cover.</span>
+          {{/if}}
+        </div>
+      </div> --}}
+
+      <div class="form-group text-right button-space-update">
+        <button class="btn btn-default" {{action 'buttonClicked' collection}}>
+          {{buttonLabel}}
+        </button>
+
+        <button class="btn btn-default" {{action 'reset' collection}}>
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,1 +1,17 @@
-{{outlet}}
+<ol class="breadcrumb">
+  <li>{{#link-to "collections"}}Browse Collections{{/link-to}}</li>
+  <li>{{#link-to "collection" model.collection.id}}{{model.collection.name}}{{/link-to}}</li>
+  <li class="active">{{model.title}}</li>
+</ol>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      {{#art-show art=model}}
+          {{#link-to 'artEdit' model class='btn btn-default'}}
+            Edit
+          {{/link-to}}
+      {{/art-show}}
+    </div>
+  </div>
+</div>

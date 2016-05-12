@@ -7,16 +7,20 @@ export default Ember.Component.extend({
   actions: {
     fileLoaded (file) {
       set(this, 'file', file);
-      console.log(this.get('file'));
+      // console.log(this.get('file'));
       this.set('upload.cover', file.data);
       // console.log(this.get('upload.cover'));
     },
 
     submit () {
-      console.log(this.get('upload'));
+      // console.log(this.get('upload'));
       this.sendAction('submit', this.get('upload'));
-      this.set('upload', {});
       console.log('Component sendAction Submitted');
+    },
+
+    reset () {
+      this.sendAction('reset');
+      console.log('Component sendAction Reset');
     },
 
   }

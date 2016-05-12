@@ -1,61 +1,83 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'bootstrap/mixins';
 
 .file-picker__preview__image {
   max-width: 300px
 }
 
-.collection {
-  margin: 20px 0 20px
+.index {
+  margin-bottom: 40px;
+  width: 300px;
+  height: 280px;
+  @include center-block();
+  @include text-overflow();
 }
 
-.amethyst {
-  color: #9966cc /** Amethyst, Moderate violet, a websafe color */
-}
-.ameblue {
-  color: #6666cc /** Moderate blue, a websafe color */
-}
-.amemagenta {
-  color: #cc66cc /** Moderate magenta, a websafe color */
-}
-.byzantine {
-  color: #bd33a4 /** Byzantine, Moderate magenta */
-}
-.dkorchid {
-  color: #9932cc /** Dark orchid, Strong violet */
-}
-.jazzberry {
-  color: #a50b5e /** Jazzberry jam, Dark pink */
-}
-.redviolet {
-  color: #c71585 /** Red violet, Strong pink */
+.cover-image {
+  padding: 10%;
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: 100%;
 }
 
-.amethyst-bg {
-  color: white;
-  background: #9966cc /** Amethyst, Moderate violet, a websafe color */
+.cover-image > h1 {
+  color: #fff;
+  text-shadow: #000 2px 2px 4px;
+  position: relative;
+  top: 90%;
+  left: 5%;
 }
-.ameblue-bg {
-  color: white;
-  background: #6666cc /** Moderate blue, a websafe color */
+
+.panel-body > .lead {
+  margin-bottom: 0px;
 }
-.amemagenta-bg {
-  color: white;
-  background: #cc66cc /** Moderate magenta, a websafe color */
+
+.author {
+  font-weight: bold;
+  color: #999999
 }
-.byzantine-bg {
-  color: white;
-  background: #bd33a4 /** Byzantine, Moderate magenta */
+
+.add-image-button {
+  float: right;
+  position: relative;
+  bottom: 30px;
 }
-.dkorchid-bg {
-  color: white;
-  background: #9932cc /** Dark orchid, Strong violet */
+
+.form-group:last-of-type {
+  margin-bottom: 0px;
 }
-.jazzberry-bg {
-  color: white;
-  background: #a50b5e /** Jazzberry jam, Dark pink */
+
+.button-space > * {
+  margin-left: 1em;
 }
-.redviolet-bg {
-  color: white;
-  background: #c71585 /** Red violet, Strong pink */
+
+.button-space-show > * {
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+.button-space-update > * {
+  margin-right: 1em;
+}
+
+.panel {
+  min-width: 200px;
+}
+
+.control-profile {
+  padding-top: 10px;
+}
+
+.about-me {
+  margin-bottom: 20px;
+}
+
+.control-profile > label {
+  text-align: right;
+}
+
+.image-show {
+  margin-bottom: 2em;
 }

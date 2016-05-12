@@ -1,17 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  buttonLabel: 'Save',
-  // user: {},
-
   actions: {
-    buttonClicked(param) {
-      console.log(param);
-      this.sendAction('action', param);
+    submit(param) {
+      // console.log(param);
+      this.sendAction('submit', param);
     },
-    // editUser () {
-    //   this.sendAction('editUser', this.get('user'));
-    // },
+    reset(record) {
+      record.rollbackAttributes();
+      this.sendAction('reset', record);
+    }
 
   }
 });

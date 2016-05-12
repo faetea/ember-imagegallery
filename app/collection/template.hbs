@@ -1,32 +1,32 @@
-<h3>Specific Collection - {{model.name}}</h3>
+<ol class="breadcrumb">
+  <li>{{#link-to "collections"}}Browse Collections{{/link-to}}</li>
+  <li class="active">{{model.name}}</li>
+</ol>
 
 <div class="col-xs-12 col-sm-12 col-md-12">
-  <div class="collection">
-    <img src={{model.mediumUrl}}/>
-    <h4>{{model.user.email}}, {{model.desc}}</h4>
-  </div>
+  {{#collection-show collection=model}}
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalArt">
+        Add Image
+      </button>
+
+      {{#link-to 'collectionEdit' model class='btn btn-default'}}
+        Edit
+      {{/link-to}}
+  {{/collection-show}}
 </div>
 
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalArt">
-  Add Image
-</button>
+<!-- add-image modal -->
 {{modal-art collection=model submit="createArt"}}
 
-
-<h4>All Images in Collection</h4>
-
-{{#each model.arts as |art|}}
-<div class="col-xs-12 col-sm-6 col-md-6">
-  <div>
-    {{#link-to "art" art}}
-      <img src={{art.smallUrl}}>
-    {{/link-to}}
-    <p><strong>{{art.title}}</strong> {{art.caption}}</p>
-    {{!-- <small>{{art.collection.name}} by {{art.collection.user.email}}</small> --}}
+<div class="container-fluid">
+  <div class="row">
+    {{#each model.arts as |art|}}
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        {{art-index art=art}}
+      </div>
+    {{else}}
+      <h4>This image collection is empty.</h4>
+    {{/each}}
   </div>
 </div>
-{{else}}
-  <h4>This image collection is empty.</h4>
-{{/each}}
