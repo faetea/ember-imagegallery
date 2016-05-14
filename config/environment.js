@@ -1,7 +1,7 @@
 /* jshint node: true */
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-auth',
+    modulePrefix: 'ember-imagegallery',
     'ember-local-storage': { fileExport: true },
     environment: environment,
     baseURL: '/',
