@@ -1,2 +1,83 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'bootstrap/mixins';
+
+.file-picker__preview__image {
+  max-width: 300px
+}
+
+.index {
+  margin-bottom: 40px;
+  width: 300px;
+  height: 280px;
+  @include center-block();
+  @include text-overflow();
+}
+
+.cover-image {
+  padding: 10%;
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-size: 100%;
+}
+
+.cover-image > h1 {
+  color: #fff;
+  text-shadow: #000 2px 2px 4px;
+  position: relative;
+  top: 90%;
+  left: 5%;
+}
+
+.panel-body > .lead {
+  margin-bottom: 0px;
+}
+
+.author {
+  font-weight: bold;
+  color: #999999
+}
+
+.add-image-button {
+  float: right;
+  position: relative;
+  bottom: 30px;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0px;
+}
+
+.button-space > * {
+  margin-left: 1em;
+}
+
+.button-space-show > * {
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+.button-space-update > * {
+  margin-right: 1em;
+}
+
+.panel {
+  min-width: 200px;
+}
+
+.control-profile {
+  padding-top: 10px;
+}
+
+.about-me {
+  margin-bottom: 20px;
+}
+
+.control-profile > label {
+  text-align: right;
+}
+
+.image-show {
+  margin-bottom: 2em;
+}

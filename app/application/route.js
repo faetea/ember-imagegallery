@@ -18,9 +18,13 @@ export default Ember.Route.extend({
     },
 
     error (reason) {
-      let unauthorized = reason.errors.some((error) => {
-        return error.status === "401";
-      });
+      let unauthorized;
+
+      if (reason.errors) {
+        unauthorized = reason.errors.some((error) => {
+          return error.status === "401";
+        });
+      }
 
       if (unauthorized) {
         this.get('flashMessages').danger('You must be authenticated to access this page.');
@@ -31,5 +35,15 @@ export default Ember.Route.extend({
 
       return false;
     },
+
+    onServerError (cb) {
+      Ember.RSVP.on('error', (reason) => {
+        // An aborted transition propogates an error to RSVP
+        if(reason.name !== 'TransitionAborted') {
+          cb(reason);
+        }
+      });
+    },
+
   },
 });

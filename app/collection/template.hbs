@@ -1,0 +1,32 @@
+<ol class="breadcrumb">
+  <li>{{#link-to "collections"}}Browse Collections{{/link-to}}</li>
+  <li class="active">{{model.name}}</li>
+</ol>
+
+<div class="col-xs-12 col-sm-12 col-md-12">
+  {{#collection-show collection=model}}
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalArt">
+        Add Image
+      </button>
+
+      {{#link-to 'collectionEdit' model class='btn btn-default'}}
+        Edit
+      {{/link-to}}
+  {{/collection-show}}
+</div>
+
+<!-- add-image modal -->
+{{modal-art collection=model submit="createArt"}}
+
+<div class="container-fluid">
+  <div class="row">
+    {{#each model.arts as |art|}}
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        {{art-index art=art}}
+      </div>
+    {{else}}
+      <h4>This image collection is empty.</h4>
+    {{/each}}
+  </div>
+</div>

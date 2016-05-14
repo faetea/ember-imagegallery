@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{user.email}}</h3>
+  </div>
+  <div class="panel-body">
+
+      <div class="col-sm-12 control-profile">
+        <label class="col-sm-2 col-md-3">Username: </label>
+        <div class="col-sm-3 col-md-4">
+          {{user.username}}
+        </div>
+      </div>
+
+      <div class="col-sm-12 control-profile">
+        <label class="col-sm-2 col-md-3">Given Name: </label>
+        <div class="col-sm-3 col-md-4">
+          {{user.firstName}}
+        </div>
+      </div>
+
+      <div class="col-sm-12 control-profile">
+        <label class="col-sm-2 col-md-3">Surname: </label>
+        <div class="col-sm-3 col-md-4">
+          {{user.lastName}}
+        </div>
+      </div>
+
+      <div class="col-sm-12 control-profile about-me">
+        <label class="col-sm-2 col-md-3">About Me: </label>
+        <div class="col-sm-6 col-md-8">
+          {{user.bio}}
+        </div>
+      </div>
+
+  </div>
+  <div class="panel-footer text-right">
+    {{yield}}
+  </div>
+</div>
