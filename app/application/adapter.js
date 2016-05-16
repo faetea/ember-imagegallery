@@ -3,7 +3,7 @@ import ActiveModelAdapter from 'active-model-adapter';
 
 export default ActiveModelAdapter.extend({
   auth: Ember.inject.service(),
-  host: 'https://shielded-bayou-70737.herokuapp.com/',
+  host: 'https://shielded-bayou-70737.herokuapp.com',
 
   headers: Ember.computed('auth.credentials.token', {
     get() {

@@ -3,7 +3,7 @@ import AjaxService from 'ember-ajax/services/ajax';
 
 export default AjaxService.extend({
   auth: Ember.inject.service(),
-  host: 'https://shielded-bayou-70737.herokuapp.com/',
+  host: 'https://shielded-bayou-70737.herokuapp.com',
 
   headers: Ember.computed('auth.credentials.token', {
     get() {

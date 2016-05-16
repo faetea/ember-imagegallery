@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.API_HOST = 'https://shielded-bayou-70737.herokuapp.com/';
+    ENV.API_HOST = 'https://shielded-bayou-70737.herokuapp.com';
     ENV.baseURL = '/';
     ENV.locationType = 'hash';
   }
