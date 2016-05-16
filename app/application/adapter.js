@@ -1,10 +1,9 @@
 import Ember from 'ember';
 import ActiveModelAdapter from 'active-model-adapter';
-import API_HOST from '../config/environment';
 
 export default ActiveModelAdapter.extend({
   auth: Ember.inject.service(),
-  host: API_HOST,
+  host: 'https://shielded-bayou-70737.herokuapp.com/',
 
   headers: Ember.computed('auth.credentials.token', {
     get() {
