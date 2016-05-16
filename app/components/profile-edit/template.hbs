@@ -5,6 +5,13 @@
   <div class="panel-body">
     <div class="form-horizontal">
       <div class="form-group">
+        <label class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-7 control-label-left">
+          {{user.email}}
+        </div>
+      </div>
+
+      <div class="form-group">
         <label class="col-sm-3 control-label">Username</label>
         <div class="col-sm-7">
           {{input class="form-control" placeholder="username" type="text" value=user.username}}
