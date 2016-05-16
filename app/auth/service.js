@@ -45,19 +45,6 @@ export default Ember.Service.extend({
     });
   },
 
-  // updateUser (profile) {
-  //   return this.get('ajax').patch(`/users/${this.get('credentials.id')}`, {
-  //     data: {
-  //       user: {
-  //         username: profile.username,
-  //         first_name: profile.firstName,
-  //         last_name: profile.lastName,
-  //         bio: profile.bio,
-  //       }
-  //     },
-  //   });
-  // },
-
   signOut () {
     return this.get('ajax').del(`/sign-out/${this.get('credentials.id')}`)
     .finally(() => this.get('credentials').reset());
