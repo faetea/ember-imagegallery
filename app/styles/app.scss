@@ -2,9 +2,41 @@
 @import 'bootstrap/theme';
 @import 'bootstrap/mixins';
 
+
+.panel {
+  min-width: 200px;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0px;
+}
+
+.panel-body > .lead {
+  margin-bottom: 0px;
+}
+
+.button-space > * {
+  margin-left: 1em;
+}
+
+.button-space-show > * {
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+.button-space-update > * {
+  margin-right: 1em;
+}
+
+
+// create collections
+
 .file-picker__preview__image {
   max-width: 300px
 }
+
+
+// index collections & art
 
 .index {
   margin-bottom: 40px;
@@ -13,6 +45,14 @@
   @include center-block();
   @include text-overflow();
 }
+
+.author {
+  font-weight: bold;
+  color: #999999
+}
+
+
+// each collection
 
 .cover-image {
   padding: 10%;
@@ -30,54 +70,24 @@
   left: 5%;
 }
 
-.panel-body > .lead {
-  margin-bottom: 0px;
+
+// each art
+
+.image-show {
+  margin-bottom: 2em;
 }
 
-.author {
-  font-weight: bold;
-  color: #999999
-}
 
-.add-image-button {
-  float: right;
-  position: relative;
-  bottom: 30px;
-}
-
-.form-group:last-of-type {
-  margin-bottom: 0px;
-}
-
-.button-space > * {
-  margin-left: 1em;
-}
-
-.button-space-show > * {
-  margin-top: 0.5em;
-  margin-left: 1em;
-}
-
-.button-space-update > * {
-  margin-right: 1em;
-}
-
-.panel {
-  min-width: 200px;
-}
+// user profile
 
 .control-profile {
   padding-top: 10px;
-}
-
-.about-me {
-  margin-bottom: 20px;
 }
 
 .control-profile > label {
   text-align: right;
 }
 
-.image-show {
-  margin-bottom: 2em;
+.about-me {
+  margin-bottom: 20px;
 }

@@ -10,6 +10,10 @@ export default Model.extend({
   smallUrl: attr('string'),
   mediumUrl: attr('string'),
 
+  createdAt: attr('date'),
+  updatedAt: attr('date'),
+  coverUpdatedAt: attr('date'),
+
   user: belongsTo('user', {async: true, autoSave: true }),
   arts: hasMany('art', { async: true, dependent: 'destroy' }),
 });

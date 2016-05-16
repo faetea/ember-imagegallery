@@ -31,7 +31,7 @@ that uses Amazon S3 to store images.
 | Create new Art w/ attached image                 | April 20th    |
 | view all Arts in current-collection              | April 25th    |
 | view specific Art in current-collection          | May 11th      |
-| Update their Art title and caption               | not yet       |
+| Update their Art title and caption               | May 14th      |
 
 ### Second Deployment
 
