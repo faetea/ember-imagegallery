@@ -8,6 +8,8 @@ export default Model.extend({
   firstName: attr('string'),
   lastName: attr('string'),
   bio: attr('string'),
+  
+  createdAt: attr('date'),
 
   collections: hasMany('collection', { async: true, dependent: 'destroy' })
 });

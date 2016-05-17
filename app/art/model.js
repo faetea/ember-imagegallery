@@ -10,5 +10,9 @@ export default Model.extend({
   smallUrl: attr('string'),
   mediumUrl: attr('string'),
 
+  createdAt: attr('date'),
+  updatedAt: attr('date'),
+  imageUpdatedAt: attr('date'),
+
   collection: belongsTo('collection', { async: true, autoSave: true })
 });

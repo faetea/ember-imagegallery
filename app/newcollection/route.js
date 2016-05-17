@@ -5,8 +5,7 @@ export default Ember.Route.extend({
   actions: {
     createCollection (upload) {
       this.get('store').createRecord('collection', upload).save()
-      .then(() => this.transitionTo('collection', upload.id));
-      // .then(() => this.transitionTo('collections'));
+      .then(() => this.transitionTo('collections'));
     },
     cancelCreate() {
       this.transitionTo('collections');

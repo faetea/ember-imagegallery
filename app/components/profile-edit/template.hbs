@@ -1,33 +1,40 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">{{user.email}}</h3>
+    <h3 class="panel-title">{{nameOrEmail}}</h3>
   </div>
   <div class="panel-body">
     <div class="form-horizontal">
       <div class="form-group">
-        <label class="col-sm-2 col-md-3 control-label">Username</label>
-        <div class="col-sm-3 col-md-4">
+        <label class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-7 control-label-left">
+          {{user.email}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-3 control-label">Username</label>
+        <div class="col-sm-7">
           {{input class="form-control" placeholder="username" type="text" value=user.username}}
         </div>
       </div>
 
       <div class="form-group">
-        <label class="col-sm-2 col-md-3 control-label">Given Name</label>
-        <div class="col-sm-3 col-md-4">
+        <label class="col-sm-3 control-label">Given Name</label>
+        <div class="col-sm-7">
           {{input class="form-control" placeholder="given name" type="text" value=user.firstName}}
         </div>
       </div>
 
       <div class="form-group">
-        <label class="col-sm-2 col-md-3 control-label">Surname</label>
-        <div class="col-sm-3 col-md-4">
+        <label class="col-sm-3 control-label">Surname</label>
+        <div class="col-sm-7">
           {{input class="form-control" placeholder="surname" type="text" value=user.lastName}}
         </div>
       </div>
 
       <div class="form-group">
-        <label class="col-sm-2 col-md-3 control-label">About Me</label>
-        <div class="col-sm-6 col-md-8">
+        <label class="col-sm-3 control-label">About Me</label>
+        <div class="col-sm-7">
           {{textarea class="form-control" placeholder="a few words about yourself" rows="3" type="text" value=user.bio}}
         </div>
       </div>
