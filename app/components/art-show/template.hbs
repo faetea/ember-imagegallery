@@ -12,7 +12,9 @@
     <p class="col-xs-10 col-sm-10 col-md-10 lead"><span class="author">{{art.title}}</span> {{art.caption}}</p>
 
     <div class="text-right button-space">
-      {{yield}}
+      {{#if isAuthor}}
+        {{yield}}
+      {{/if}}
     </div>
   </div>
 </div>
