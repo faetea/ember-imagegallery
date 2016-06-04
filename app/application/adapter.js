@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import ActiveModelAdapter from 'active-model-adapter';
+import ENV from 'ember-imagegallery/config/environment';
 
 export default ActiveModelAdapter.extend({
   auth: Ember.inject.service(),
